@@ -1,8 +1,9 @@
-import Meal from '../../assets/meal.png';
+// import Meal from '../../assets/meal.png';
 import './LoadPage.css';
-import "@fontsource/rubik-mono-one";
+import "@fontsource/rubik-mono-one/400.css";
 import { motion } from 'motion/react';
 import { useNavigate } from 'react-router-dom';
+import Meal from '../../assets/meal.png';
 
 function LoadPage() {
   const navigate = useNavigate();
@@ -12,7 +13,7 @@ function LoadPage() {
   }
   return (
     <div className="load-page" onClick={handleClick}>
-      <div className='img'></div>
+      <div className='img' style={{backgroundImage: `url(${Meal})`}}></div>
       <motion.h1
         className="mot-h1"
         initial={{ scale: 0, x: "-50%", y: "-100%" }} // from top

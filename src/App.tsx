@@ -8,7 +8,7 @@ import Placeholder from './components/AccountPage/Placeholder';
 function App() {
 
   return (
-    <BrowserRouter basename="/mealfinder.github.io">
+    <BrowserRouter >
     <Routes>
       <Route path="/" element={<LoadPage />} />
       <Route path='/home' element={<HomePage/>}/>

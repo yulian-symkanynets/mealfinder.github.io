@@ -1,4 +1,4 @@
-import React, { use, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './RecipeCard.css';
 import type { Nutrition } from '../components/HomePage/HomePage';
 
@@ -20,16 +20,16 @@ function RecipeCard({ recipe }: RecipeCardProps) {
     const [nutrition, setNutrition] = useState([]);
 
     useEffect(() => {
-        // searchNutrition();
+        searchNutrition();
         // console.log(test++);
     }, [nutrition]);
 
     const searchNutrition = async () => {
         const res = await fetch(
-            `https://api.spoonacular.com/recipes/${recipe.id}/nutritionWidget.json?apiKey=${apiKey}`
+            `ht://api.spoonacular.com/recipes/${recipe.id}/nutritionWidget.json?apiKey=${apiKey}`
         );
         const data = await res.json();
-        searchNutrition(data.results)
+        setNutrition(data.results)
         console.log(data.results);
         // setRecipes(data.results);
   };
