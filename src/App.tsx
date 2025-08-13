@@ -4,11 +4,11 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import LoadPage from './components/LoadPage/LoadPage';
 import HomePage from './components/HomePage/HomePage';
 import Placeholder from './components/AccountPage/Placeholder';
-import MealPlan from './components/MealPlan/MealPlan';
+// import MealPlan from './components/MealPlan/MealPlan';
 function App() {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/mealfinder.github.io">
     <Routes>
       <Route path="/" element={<LoadPage />} />
       <Route path='/home' element={<HomePage/>}/>
