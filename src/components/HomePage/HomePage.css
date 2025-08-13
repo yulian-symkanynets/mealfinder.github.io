@@ -1,0 +1,153 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;     /* already had this */
+  width: 100vw;
+  background-color: #f0f0f0;
+  overflow: hidden;  /* prevent the whole page from scrolling */
+  /* background-image: url('../../assets/home_back.jpg'); */
+}
+
+.search-bar{
+  display: flex;
+    width: 40%;
+    height: 100%;
+    /* background-color: #B2CD9C; */
+    border-radius: 100px;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+input{
+    display: flex;
+    justify-content: center;
+    background-color: #B2CD9C;
+    align-items: center;
+    border-radius: 80px;
+    border: none;
+    width: 100%;
+    outline: none;
+    height: 100%;
+    font-family: 'Rubik Mono One';
+    padding-left: 20px;
+    color: #251616;
+    color : rgba(37, 22, 22, 0.37);
+    font-size: 20px;
+}
+
+input::placeholder{
+    color: #251616;
+    color : rgba(37, 22, 22, 0.37);
+    font-size: 0.8em;
+    padding-left: 20px;
+}
+
+.account-icon{
+    position: absolute;
+    right: 2%;
+    top: 24%;
+    width: auto;
+    height: 50%;
+
+}
+
+.recipe-list {
+  flex: 1 1 auto;    /* take remaining space */
+  overflow-y: auto;  /* scroll only this area */
+  padding: 16px 0;
+
+  /* center the content area while keeping the list the scroller */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* centers inner cards horizontally */
+  gap: 16px;      /* centers the list itself */
+}
+.recipe-list > * {
+  width: 80%;
+}
+.search-btn{
+    width: 10%;
+    height: 100%;
+    outline: none;
+    border: none;
+    border-radius: 1000px;
+    background-color: #B2CD9C;
+    font-family: 'Rubik Mono One';
+}
+
+
+.header {
+  flex: 0 0 auto;    /* keep header height fixed */
+  position: relative;/* sticky no longer needed since page won't scroll */
+  background-color: #7F8CAA;
+  padding: 20px;
+  height: 5%;
+  display: flex;
+  align-items: center;
+    justify-content: center;
+}
+
+/* Position the burger button (your custom one) */
+.burger-trigger {
+  position: fixed;
+  left: 16px;
+  top: 16px;
+  z-index: 1200;            /* above content, below menu overlay is fine */
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* ---- react-burger-menu required hooks ---- */
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;                  /* left side */
+  z-index: 1300;
+}
+
+.bm-menu {
+  background: #0f172a;      /* slate-900 vibe */
+  padding: 2.5rem 1.5rem 1.5rem;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.bm-item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.menu-item {
+  color: #e5e7eb;           /* gray-200 */
+  text-decoration: none;
+  padding: 0.6rem 0.75rem;
+  border-radius: 8px;
+  transition: background 160ms ease;
+}
+.menu-item:hover {
+  background: rgba(255,255,255,0.06);
+}
+
+.bm-overlay {
+  background: rgba(0,0,0,0.35);
+}
+
+/* Optional: hide default built-in burger of react-burger-menu if it ever shows */
+.bm-burger-button { display: none; }
+
+.no-recipes {
+  color: #6b7280;  /* gray-600 */
+  font-size: 1.25rem;
+  text-align: center;
+  margin-top: 2rem;
+  font-family: 'Rubik Mono One';
+}

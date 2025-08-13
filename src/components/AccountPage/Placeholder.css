@@ -1,0 +1,21 @@
+.account-page{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Rubik Mono One';
+}
+/* .account-page {
+  display: grid;
+  gap: 12px;
+  place-items: start;
+  padding: 24px;
+} */
+
+.spinner {
+  display: block;
+  /* optional: center it */
+  margin: 12px 0;
+  will-change: transform;
+}
